@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Simple Calculator</string>
+
+    <string name="label_number_a">First Operand</string>
+    <string name="label_number_b">Second Operand</string>
+
+    <string name="op_add">+</string>
+    <string name="op_subtract">-</string>
+    <string name="op_multiply">x</string>
+    <string name="op_divide">/</string>
+
+    <string name="label_answer">Answer:</string>
+
+
+
+</resources>
