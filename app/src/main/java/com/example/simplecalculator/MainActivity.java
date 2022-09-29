@@ -1,5 +1,12 @@
+/**
+ * The package name here reflects the path from your app/src/main/java/ folder down to this file.
+ */
 package com.example.simplecalculator;
 
+/**
+ * AppCompatActivity is a base class for activities that wish to use some of the newer platform
+ * features on older Android devices. This allows the app to be used on a wider variety of devices.
+ */
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -9,20 +16,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.lang.Math;
-import java.net.Inet4Address;
 
+/**
+ * We are extending the functionality of the base Activity class.
+ */
 public class MainActivity extends AppCompatActivity {
 
+    // This gets the class name as a string, and will be used for Log tags.
     private String TAG = getClass().getSimpleName();
 
+    /**
+     * A Context is the current state of the application/object, and is used to get information
+     * about the application environment.
+     *
+     * Uses of Context: Load Resource Values, Start a Service, Bind to a Service, Send a Broadcast,
+     * Register BroadcastReceiver.
+     */
     private Context context = null;
 
     /**
      * onCreate is where you initialize your activity. This method is called upon the activity's
-     * startup. You override it to customize what will happen.
+     * startup.
+     *
+     * The @Override annotation indicates that the child class method is overwriting
+     * its base class method.
       */
 
     @Override
@@ -146,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
             return answer;
         }
 
-        // Convert the string to a double.
+        // Convert the string to an integer.
         try
         {
             num_a = Integer.parseInt(num_a_str);
@@ -184,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
             return answer;
         }
 
-        // Convert the string to a double.
+        // Convert the string to an integer.
         try
         {
             num_b = Integer.parseInt(num_b_str);
@@ -239,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
         final Integer num_a = get_num_a();
         if (null == num_a)
         {
+            // Set the answer field of the UI to reflect that an error occurred.
             set_error();
             return;
         }
@@ -263,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        // Set the result
+        // Set the result in the answer field of the UI.
         set_result(result);
     }
 
@@ -381,3 +401,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+// End of file.

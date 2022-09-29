@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.simplecalculator">
 
+    <!-- Every Android app has a unique application ID that looks like a Java package name,
+    such as com.example.simplecalculator. This ID uniquely identifies your app on the device
+    and in Google Play Store. Once you publish your app, you should never change the application ID.-->
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,12 +17,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleCalculator"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
+
+                <!--  This activity is the entry point for the app. -->
                 <action android:name="android.intent.action.MAIN" />
 
+                <!--  This activity will be launched when the app opens/starts up. -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
